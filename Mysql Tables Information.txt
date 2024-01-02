@@ -1,0 +1,23 @@
+
+//Create Two Table in one DB
+Table 1.moduls:
+CREATE TABLE `moduls` (
+  `mid` int DEFAULT NULL,
+  `mname` varchar(255) DEFAULT NULL,
+  `employee_id` int DEFAULT NULL,
+  `status` varchar(45) DEFAULT 'No Check',
+  `req_id` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`req_id`),
+  KEY `moduls_ibfk_1` (`employee_id`),
+  CONSTRAINT `moduls_ibfk_1` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+Table  2.employee:
+CREATE TABLE `employee` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

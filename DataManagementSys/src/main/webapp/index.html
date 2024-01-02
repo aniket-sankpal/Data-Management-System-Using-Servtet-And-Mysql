@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(46, 159, 230);
+  
+}
+form {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 40px 45px 40px;
+  width: 400px;
+}
+form .head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+form .head h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+form .head p,
+form .head p a {
+  font-weight: 300;
+}
+input {
+  border-radius: 7px;
+  border: none;
+  background-color: #f8f8f8;
+  padding: 15px;
+  outline: none;
+  transition: 0.3;
+  font-weight: 300;
+}
+input:focus {
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(107, 107, 107, 0.1),
+    0 1px 3px rgba(107, 107, 107, 0.12);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+input::placeholder {
+  font-size: 90%;
+  font-weight: 300;
+  font-style: italic;
+  color: #ccc;
+}
+.bio {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3;
+}
+.bio input {
+  width: 49%;
+}
+.submit {
+  margin: 10px 0;
+  background-color: #4896fe;
+  border-radius: 7px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  outline: none;
+}
+.checkBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.checkBox input {
+  margin-right: 10px;
+  border: none;
+  background-color: #f8f8f8;
+}
+.checkBox p,
+.checkBox p a {
+  font-weight: 300;
+  font-size: 12px;
+}
+@media (max-width: 475px) {
+  .bio {
+    flex-direction: column;
+  }
+  .bio input {
+    width: 100%;
+  }
+  .bio input:nth-child(1) {
+    margin-bottom: 10px;
+  }
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Employee Registration Form</title>
+</head>
+<body>
+
+<form action="SaveServlet" method="post">
+<div class="head">
+    <h2>Create a Account</h2>
+    <p>Already have account? <a href="LoginForm.html"> Sign in</a></p>
+  </div>
+  
+  
+  <div class="form-group">
+   <div class="checkbox">
+  <select name="role" style="width:125px"> 
+  <option>--Select Role--</option>
+<option>A</option>
+<option>C</option>
+<option>R</option>
+<option>U</option>
+<option>D</option>
+</select>
+</div>
+ <br><br>
+ <div></div>
+ 
+    <input autocomplete="off" type="text" placeholder="Username" name="name" >
+   <br><br>
+    <input autocomplete="off" type="password" id="" placeholder="Password"  >
+     <br><br>
+    <button class="submit">
+      <div></div>
+      Submit
+      <i class="fas fa-long-arrow-alt-right"></i>
+    </button>
+   
+  </div>
+
+</form>
+</body>
+</html>
+
